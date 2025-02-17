@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Projects</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <!-- Modal para nuevo proyecto -->
+        <div id="project-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>New Project</h2>
+                <form id="project-form">
+                    <input type="text" id="new-project-name" placeholder="Project Name" required>
+                    <div class="modal-buttons">
+                        <button type="submit">Create</button>
+                        <button type="button" id="cancel-project">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="project-input">
+            <button id="add-project">Add Project</button>
+            <button id="view-all-tasks">View All Tasks</button>
+        </div>
+
+        <ul id="project-list"></ul>
+
+        <div id="task-section" class="hidden">
+            <h2 id="project-title"></h2>
+            <div class="task-input">
+                <input type="text" id="task" placeholder="Add a new task...">
+                <input type="date" id="due-date">
+                <label for="priority">Priority:</label>
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="text" id="description" placeholder="Description">
+
+                <button id="add-task">Add Task</button>
+            </div>
+            <ul id="task-list"></ul>
+            <button id="back-to-projects">Back to Projects</button>
+        </div>
+
+        <div id="all-tasks-section" class="hidden">
+            <h2>All Tasks</h2>
+            <ul id="all-tasks-list"></ul>
+            <button id="back-to-projects-from-all">Back to Projects</button>
+        </div>
+    </div>
+
+</body>
+</html>
